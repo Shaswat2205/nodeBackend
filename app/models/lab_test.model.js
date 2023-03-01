@@ -6,7 +6,7 @@ module.exports = (sequelize, Sequelize) => {
             primaryKey: true
         },
         testname: {
-            type: Sequelize.INTEGER.STRING(200),
+            type: Sequelize.STRING(200),
             allowNull: false
         },
         price: {

@@ -1,12 +1,12 @@
 module.exports = (sequelize, Sequelize) => {
     const walkin_pharma_bill = sequelize.define("walkin_pharma_bill", {
         id: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
         bill_no: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         patient_name: {
@@ -22,7 +22,7 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
         date: {
-            type: Sequelize.date,
+            type: Sequelize.DATE,
             allowNull: false
         },
         medecine: {
@@ -30,15 +30,15 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
         batch: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         available_qty: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         exp_date: {
-            type: Sequelize.date,
+            type: Sequelize.DATE,
             allowNull: false
         },
         unit: {
@@ -46,23 +46,23 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
         quantity: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         price: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         total_amt: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         discount_amt: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         grand_amt: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         type: {

@@ -1,7 +1,8 @@
 module.exports = (sequelize, Sequelize)=>{
     const patient_examination = sequelize.define("patient_examination",{
         id:{
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
+            primaryKey:true,
             allowNull: false
         },
         patient_id: {
@@ -49,23 +50,23 @@ module.exports = (sequelize, Sequelize)=>{
             allowNull: false
         },
         jivha_upalepita: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         jivha_ragayukta: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         jivha_others: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         jivha_paka: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         jivha_centrally_coated: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         shabda: {
@@ -77,47 +78,47 @@ module.exports = (sequelize, Sequelize)=>{
             allowNull: false
         },
         varna_ruksha: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         varna_snigdha: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         varna_tanu: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         varna_sthula: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         varna_ushna: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         drik_pale: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         drik_conjested: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         drik_kalushita: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         drik_akshimalasrava: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         drik_jalasrava: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         drik_raga: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         akriti: {

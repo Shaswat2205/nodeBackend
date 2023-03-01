@@ -34,8 +34,8 @@ exports.create = (req, res) =>{
         designation,
         reg_no
     };
-    //save address
-    return doctor.create(data3)
+    //update address
+    return doctor.update(data3)
         .then(async data) => {
             data = data.get({plain: true});
 

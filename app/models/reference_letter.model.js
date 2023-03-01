@@ -1,7 +1,7 @@
 module.exports = (sequelize, Sequelize) => {
     const reference_letter = sequelize.define("reference_letter", {
         id: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
@@ -14,7 +14,7 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
         exam_date: {
-            type: Sequelize.date,
+            type: Sequelize.DATE,
             allowNull: false
         },
         diagnosis: {
@@ -26,11 +26,11 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
         created_date: {
-            type: Sequelize.date,
+            type: Sequelize.DATE,
             allowNull: false
         },
         created_by: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
     }, {
