@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 require("./app/routes/data.routes")(app);
 require("./app/routes/user.routes")(app);
 require("./app/routes/employee.routes")(app);
-
+require("./app/routes/lab_test.routes")(app);
 
 
 app.use(notFound);
