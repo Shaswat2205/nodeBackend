@@ -43,7 +43,7 @@ exports.create = (req, res) => {
         })
         .catch(err => {
             console.error(`Error Creating Employee :: ${err}`);
-            return res.status(500).json({ message: 'Internal Server Error' });
+            return res.status(500).json({ message: 'Internal Server Error emp' });
         });
 };
 

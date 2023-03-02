@@ -1,66 +1,48 @@
 const { condition } = require("sequelize");
 const db = require("../models");
-const Appoinment = db.appoinment;
+const Labtest_group = db.labtest_group;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Data
 exports.create = (req, res) => {
 
     const {
-        appointmentid,
-        paintentid,
-        roomid,
-        departmentid,
-        appointmentdate,
-        appointmenttime,
-        doctorid,
-        status,
-        appoinmenttype,
-        app_reason,
-        ipd,
-        consultancy,
-        payment_mode,
-        payment,
-        reception_time,
-        doctor_time,
-        doctor_outtime,
-        pharma_time
+        name,
+        ssn,
+        gender,
+        salary,
+        designation,
+        department,
+        experience,
+        resume,
+        date_of_joining
     } = req.body
 
     const data1 = {
-        appointmentid,
-        paintentid,
-        roomid,
-        departmentid,
-        appointmentdate,
-        appointmenttime,
-        doctorid,
-        status,
-        appoinmenttype,
-        app_reason,
-        ipd,
-        consultancy,
-        payment_mode,
-        payment,
-        reception_time,
-        doctor_time,
-        doctor_outtime,
-        pharma_time
+        name,
+        ssn,
+        gender,
+        salary,
+        designation,
+        department,
+        experience,
+        resume,
+        date_of_joining
     };
 
     // Save Address in the database
-    return Appoinment.create(data1)
+    return Labtest_group.create(data1)
         .then(async data => {
             data = data.get({ plain: true });
 
             return res.status(201).json({
                 code: 200,
-                message: "Appointment added successfully",
+                message: "Employee added successfully",
                 data
             });
         })
         .catch(err => {
-            console.error(`Error Creating Appointment :: ${err}`);
+            console.error(`Error Creating Employee :: ${err}`);
             return res.status(500).json({ message: 'Internal Server Error' });
         });
 };
@@ -81,7 +63,7 @@ exports.findAll = (req, res) => {
         condition.updatedAt = { [Op.lt]: new Date(req.query.nextToken) };
     }
 
-    return Appoinment.findAll({
+    return Labtest_group.findAll({
         where: condition,
         order: [['updatedAt', 'desc']],
         limit: limit,
@@ -104,7 +86,7 @@ exports.findAll = (req, res) => {
 exports.deleteAll = (req, res) => {
 
 
-    return Appoinment.destroy({
+    return Employee.destroy({
         where: {
             experience: {
                 [Op.gte]: 20
@@ -114,7 +96,7 @@ exports.deleteAll = (req, res) => {
         .then(async data => {
 
 
-            return res.status(200).json({ message: "Appontiment deleted successfully" });
+            return res.status(200).json({ message: "employee deleted successfully" });
         })
         .catch(err => {
             console.error(`Error deleteing employee :: ${err}`);

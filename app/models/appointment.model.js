@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-    const appoinment = sequelize.define("appointment", {
+    const appointment = sequelize.define("appointment", {
         appoinmentid: {
             type: Sequelize.INTEGER.UNSIGNED,
             autoIncrement: true,
@@ -81,5 +81,5 @@ module.exports = (sequelize, Sequelize) => {
         freezeTableName: true
     });
 
-    return appoinment;
+    return appointment;
 };
