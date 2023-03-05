@@ -157,10 +157,6 @@ module.exports = (sequelize, Sequelize)=>{
             type: Sequelize.STRING(100),
             allowNull: false
         },
-        saara_assess: {
-            type: Sequelize.STRING(100),
-            allowNull: false
-        },
         satmya_type: {
             type: Sequelize.STRING(100),
             allowNull: false
