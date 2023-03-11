@@ -7,7 +7,7 @@ module.exports = (sequelize, Sequelize) => {
         },
         testname: {
             type: Sequelize.STRING(200),
-            allowNull: false
+            allowNull: true
         },
         price: {
             type: Sequelize.INTEGER.UNSIGNED,
