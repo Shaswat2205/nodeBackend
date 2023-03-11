@@ -1,4 +1,3 @@
-//NOT COMPLETED YET
 module.exports = (sequelize, Sequelize) => {
     const op_examination1 = sequelize.define("op_examination1", {
         id: {
