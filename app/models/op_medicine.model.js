@@ -49,7 +49,7 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING(50),
             allowNull: false
         },
-        anupama: {
+        anupana: {
             type: Sequelize.TEXT,
             allowNull: false
         }
