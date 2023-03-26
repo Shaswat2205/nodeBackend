@@ -1585,7 +1585,10 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING(100),
             allowNull: false
             },
-            ecg
+            ecg: {
+                type: Sequelize.STRING(100),
+                allowNull: false
+                }
     }, {
         freezeTableName: true
     });

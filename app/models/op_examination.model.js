@@ -122,11 +122,11 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
         roga: {
-            type: Sequelize.UNSINGNED.INTEGER,
+            type: Sequelize.INTEGER.UNSIGNED,
             allowNull: false
         },
         dept_id: {
-            type: Sequelize.UNSIGNED.INTEGER,
+            type: Sequelize.INTEGER.UNSIGNED,
             allowNull: false
         },
         grbs: {
