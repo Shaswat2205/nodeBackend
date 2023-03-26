@@ -18,20 +18,20 @@ exports.create = (req, res) =>{
     };
     //save address
     return department.create(data2)
-        .then(async data) => {
+        .then(async data => {
             data = data.get({plain: true});
 
             return res.status(201).json({
                 code:200,
 
-            })
-        }
+            });
+        })
+    }
     //retreiving addresss
     exports.findAll = (req, res) => {
         const limit = Math.min(parseInt(req.query.limit || 10), 10);
         const condition = {}
         if(req.query.department) {
-            condition.
+            //condition.
         }
-    }
-}
+    };
