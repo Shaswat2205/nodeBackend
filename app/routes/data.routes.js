@@ -1,11 +1,19 @@
+const employee = require("../controllers/employee.controller")
+
 module.exports = app => {
-    const data = require("../controllers/data.controller");
-    const { protect } = require("../middlewares/authMiddleware");
+    const { protect, admin } = require("../middlewares/authMiddleware");
 
-    var router = require("express").Router();
+    const router = require("express").Router();
 
-    // Create an address
-    router.route("/").post( data.create);
+    // create 
+    router.post("/", employee.create);
 
-    app.use("/api/data", router);
+    router.get("/", employee.findAll);
+
+    router.delete("/", protect, admin, employee.deleteAll);
+
+
+
+    app.use("/api/employee", router);
+
 };
