@@ -34,22 +34,18 @@ exports.create = (req, res) =>{
         designation,
         reg_no
     };
-    //update address
-    return doctor.update(data3)
-        .then(async data) => {
-            data = data.get({plain: true});
+    return doctor.create(data3)
+    .then(async data => {
+        data = data.get({ plain: true });
 
-            return res.status(201).json({
-                code:200,
-
-            })
-        }
-    //retreiving addresss
-    exports.findAll = (req, res) => {
-        const limit = Math.min(parseInt(req.query.limit || 10), 10);
-        const condition = {}
-        if(req.query.department) {
-            condition.
-        }
-    }
-}
+        return res.status(201).json({
+            code: 200,
+            message: "doctor added successfully",
+            data
+        });
+    })
+    .catch(err => {
+        console.error(`Error Creating doctor :: ${err}`);
+        return res.status(500).json({ message: 'Internal Server Error emp' });
+    });
+};

@@ -15,7 +15,7 @@
     "api",
     "mysql"
   ],
-  "author": "priyansh",
+  "author": "Shaswat",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
