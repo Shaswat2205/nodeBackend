@@ -41,7 +41,11 @@ app.use(notFound);
 app.use(errorHandler);
 
 // set port, listen for requests
+<<<<<<< HEAD
 const PORT = process.env.PORT || 5000;
+=======
+const PORT = 8000;
+>>>>>>> 3cdbdba6f1c97c71ad2b729f8cbc33aa049eb29a
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
